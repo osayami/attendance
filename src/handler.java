@@ -1,30 +1,51 @@
 import java.util.*;
 public class handler {
 	static int year;
-	static String dept, subjects;
+	static String dept, className;
 	static ArrayList<Details> list=new ArrayList<Details>();;
 	static Scanner s=new Scanner(System.in);
+	static boolean running=true;
 	
 	static public void start() {
 		
 		System.out.println("Welcome to the attendance app! \n "
 				+ "Please use it responsibly and not for a distopian work culture ;)");
-		//choice();
-		addStudent();
-		addStudent();
-		check();
-		printDet();
+		init();
+		while(running) {
+		System.out.println("1.Add Student \n 2.Check attendance \n 3.Print details \n 4.Exit");
+		int c=s.nextInt();
+		switch(c) {
+		case 1 :
+			addStudent();
+			break;
+		
+		case 2 :
+			check();
+			break;
+		case 3 :
+			printDet();
+			break;
+		case 4 :
+			running=false;
+			break;
+		default :
+			System.out.println("Invalid choice!");
+		break;
+		
+		}
+		
+	  }
 		
 	}
-	 static public void choice() {
+	 static public void init() {
 		 System.out.println("\n Please enter college details:");
 		
-		System.out.println("Enter your department: ");
+		System.out.println("Enter the department: ");
 		dept = s.next();
-		System.out.println("Enter your year: ");
+		System.out.println("Enter the year: ");
 		year = s.nextInt();
-		System.out.println("Enter your subject: ");
-		subjects = s.next();
+		System.out.println("Enter the class name: ");
+		className = s.next();
 		
 	}
 	 // Method that records attendance responses of the students

@@ -10,7 +10,7 @@ public class Details {
 	 
 	public Details (String n) {
 		name=n;
-		id++;
+		id=handler.list.size();
 	}
 
 	public int getCount() {

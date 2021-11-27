@@ -10,13 +10,6 @@ public class Attendance {
 		
 		handler.start();
 		
-		
-		
-	}
-	
-	
-	
-	
-	
+	}	
 	
 }
