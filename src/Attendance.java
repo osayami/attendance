@@ -16,7 +16,7 @@ public class Attendance {
 				+ "Please use it responsibly and not for a distopian work culture ;)");
 		Handler.init();
 		while (running) {
-			System.out.println("1.Add Student \n 2.Check attendance \n 3.Print details \n 4.Exit");
+			System.out.println(" 1.Add Student \n 2.Check attendance \n 3.Print details \n 4.Exit \n Enter your choice:");
 			int c = s.nextInt();
 
 			switch (c) {

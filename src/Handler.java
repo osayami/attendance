@@ -19,6 +19,7 @@ public class Handler {
 		sectionName = s.next();
 
 	}
+	
 	static void addStudent() {
 		System.out.println("\n Please enter student details:");
 
@@ -27,27 +28,27 @@ public class Handler {
 		studentlist.add(det);
 
 	}
+	
 	// Method that records attendance responses of the students
 	public static void check() {
 
-		for (int j = 0; j < studentlist.size(); j++) {
-			Details dis = studentlist.get(j);
+		for (Details stu:studentlist) {
+			
 
-			System.out.println(dis.id + "\t" + dis.name + "\t \t \t" + "Y or n:");
+			System.out.println(stu.id + "\t" + stu.name + "\t \t \t" + "Y or n:");
 
 			char c = s.next().charAt(0);
 
 			switch (c) {
 			case 'y':
 			case 'Y':
-				dis.attended++;
+				stu.attended++;
 				break;
 			case 'n':
 			case 'N':
 				break;
 			default:
 				System.out.println("please enter y or n");
-				j--;
 				break;
 			}
 
@@ -58,13 +59,9 @@ public class Handler {
 	// display
 	public static void printDet() {
 		System.out.println("\t \t \t \t ---------------------Details------- ------------\n");
-		System.out.println(" ID \t" + "\t" + "Name" + "\t \t \t" + "Attended");
-		for (int i = 0; i < studentlist.size(); i++) {
-			Details dis = studentlist.get(i);
-
-			System.out.println(dis.id + "\t" + dis.name + "\t \t \t" + dis.attended);
+		System.out.println(" ID \t \t" + "Name\\t \\t \\t"+ "Attended");
+		for (Details stu:studentlist) {
+	System.out.println(stu.id + "\t" + stu.name + "\t \t \t" + stu.attended);
 		}
 	}
-
-	
 }
