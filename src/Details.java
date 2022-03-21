@@ -1,24 +1,22 @@
-import java.util.*;
 
-public class Details { 
-	
+public class Details {
 
 	// Basic class object for the details of the student
-    int id=0,count=0;
-    
+	int id = 0, attended = 0;
+
 	String name;
-	 
-	public Details (String n) {
-		name=n;
-		id=handler.list.size();
+
+	public Details(String n) {
+		name = n;
+		id = Handler.studentlist.size();
 	}
 
-	public int getCount() {
-		return count;
+	public int getattended() {
+		return attended;
 	}
 
-	public void setCount(int count) {
-		this.count = count;
+	public void setattended(int attended) {
+		this.attended = attended;
 	}
 
 	public String getName() {
@@ -31,7 +29,7 @@ public class Details {
 
 	@Override
 	public String toString() {
-		return "Details [id=" + id + ", attended " + count + "classes , name=" + name + "]";
+		return "Details [id=" + id + ", attended " + attended + "classes , name=" + name + "]";
 	}
 
 }
