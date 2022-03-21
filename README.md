@@ -1,5 +1,5 @@
 # attendance-java
- simple app for atttendance.
+ simple app for attendance.
  
  #### This project is heavily over engineered and not meant for regular use. 
  
