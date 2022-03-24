@@ -32,7 +32,7 @@ public class Handler {
 	// Method that records attendance responses of the students
 	public static void check() {
 
-		for (Details stu:studentlist) {
+		for (var stu:studentlist) {
 			
 
 			System.out.println(stu.id + "\t" + stu.name + "\t \t \t" + "Y or n:");
@@ -59,8 +59,8 @@ public class Handler {
 	// display
 	public static void printDet() {
 		System.out.println("\t \t \t \t ---------------------Details------- ------------\n");
-		System.out.println(" ID \t \t" + "Name\\t \\t \\t"+ "Attended");
-		for (Details stu:studentlist) {
+		System.out.println(" ID \t \t" + "Name \t \t \t"+ "Attended");
+		for (var stu:studentlist) {
 	System.out.println(stu.id + "\t" + stu.name + "\t \t \t" + stu.attended);
 		}
 	}

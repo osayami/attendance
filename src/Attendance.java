@@ -14,23 +14,26 @@ public class Attendance {
 
 		System.out.println("Welcome to the attendance app! \u00A9 \n "
 				+ "Please use it responsibly and not for a distopian work culture ;)");
-		Handler.init();
+		
 		while (running) {
-			System.out.println(" 1.Add Student \n 2.Check attendance \n 3.Print details \n 4.Exit \n Enter your choice:");
+			System.out.println("1.Enter College details \n 2.Add Student \n 3.Check attendance \n 4.Print details \n 5.Exit \n Enter your choice:");
 			int c = s.nextInt();
 
 			switch (c) {
 			case 1:
+				Handler.init();
+				break;
+			case 2:
 				Handler.addStudent();
 				break;
 
-			case 2:
+			case 3:
 				Handler.check();
 				break;
-			case 3:
+			case 4:
 				Handler.printDet();
 				break;
-			case 4:
+			case 5:
 				running = false;
 				break;
 			default:
